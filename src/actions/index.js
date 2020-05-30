@@ -2,10 +2,11 @@ export const INCREMENT = 'INCREMENT';
 export const DECREMENT = 'DECREMENT';
 export const RESET = 'RESET';
 export const RESET_MSG = 'リセットしました';
+export const YOURNAME = 'YOURNAME';
 
-export const increment = () => {
+export const increment = () => { //Action Creator
   return {
-    type: INCREMENT
+    type: INCREMENT //Action
   }
 }
 
@@ -19,5 +20,14 @@ export const reset = () => {
   return {
     type: RESET,
     msg: RESET_MSG
+  }
+}
+
+export const showYourName = inputname => {
+  inputname = 'test';
+  // let input = document.getElementById('input');
+  return {
+    type: YOURNAME,
+    inputName: inputname
   }
 }
