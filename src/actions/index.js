@@ -24,7 +24,6 @@ export const reset = () => {
 }
 
 export const showYourName = inputname => {
-  inputname = 'test';
   // let input = document.getElementById('input');
   return {
     type: YOURNAME,

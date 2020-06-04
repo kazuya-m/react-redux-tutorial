@@ -5,6 +5,9 @@ import { increment, decrement, reset, showYourName } from '../actions';
 class App extends Component {
   render() {
     const props = this.props;
+    const getInput = e => {
+      props.showYourName(e.target.value);
+    }
     
     return (
       <React.Fragment>
@@ -13,7 +16,7 @@ class App extends Component {
         <button onClick={props.decrement}>-1</button>
         <button onClick={props.reset}>RESET!</button>
         <h3>{props.yourname}</h3>
-        <button onClick={this.props.showYourName('a')} id='input'>name</button>
+        <input id='input' onChange={ e => {getInput(e)} }></input>
       </React.Fragment>
     );
   }
