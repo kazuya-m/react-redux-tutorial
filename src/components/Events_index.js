@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { increment, decrement, reset, showYourName } from '../actions';
 
-class App extends Component {
+class EventsIndex extends Component {
   render() {
     const props = this.props;
     const getInput = e => {
@@ -37,4 +37,4 @@ const mapDispatchToProps = dispatch => {
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default connect(mapStateToProps, mapDispatchToProps)(EventsIndex);
