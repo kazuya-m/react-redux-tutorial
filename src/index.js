@@ -8,7 +8,7 @@ import EventsIndex from './components/Events_index.js';
 import * as serviceWorker from './serviceWorker';
 import thunk from 'redux-thunk';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import EventsNew from '../components/events/New.js';
+import EventsNew from './components/events/New.js';
 
 const store = createStore(reducer, applyMiddleware(thunk));
 
@@ -17,7 +17,7 @@ ReactDOM.render(
   <Provider store={store}>
     <BrowserRouter>
       <switch>
-        <Route exact path='events/New.js' component={EventsNew} />
+        <Route exact path='./components/events/New.js' component={EventsNew} />
         <Route exact path='/' component={EventsIndex} />
       </switch>
     </BrowserRouter>
