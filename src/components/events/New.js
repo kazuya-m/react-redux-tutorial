@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import _ from 'lodash';
 import { Link } from 'react-router-dom';
 import { Field, reduxForm } from 'redux-form';
 
@@ -11,6 +10,7 @@ class EventsNew extends Component {
     super(props)
     this.onSubmit = this.onSubmit.bind(this);
   }
+
   renderField(field) {
     const { input, label, type, meta: { touched, error } } = field;
     return (
@@ -27,7 +27,7 @@ class EventsNew extends Component {
   }
 
   render() {    
-    const { handleSubmit } = this.props;
+    const { handleSubmit, pristine, submitting } = this.props;
     return (
       <React.Fragment>
         <form onSubmit={handleSubmit(this.onSubmit)}>
@@ -39,7 +39,7 @@ class EventsNew extends Component {
           </div>
 
           <div>
-            <input type='submit' value='submit' disabled={false} />
+            <input type='submit' value='submit' disabled={pristine || submitting} />
             <Link to ='/'>Cancel</Link> 
           </div>
           
