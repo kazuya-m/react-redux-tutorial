@@ -16,10 +16,10 @@ const store = createStore(reducer, applyMiddleware(thunk));
 ReactDOM.render(
   <Provider store={store}>
     <BrowserRouter>
-      <switch>
-        <Route exact path='./components/events/New.js' component={EventsNew} />
+      <Switch>
+        <Route exact path='/components/events/New' component={EventsNew} />
         <Route exact path='/' component={EventsIndex} />
-      </switch>
+      </Switch>
     </BrowserRouter>
   </Provider>,
   document.getElementById('root')

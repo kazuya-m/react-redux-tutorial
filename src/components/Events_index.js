@@ -38,7 +38,7 @@ class EventsIndex extends Component {
             {console.log(props.events)}
           </tbody>
         </table>
-        <Link to='events/new'>New Events</Link>
+        <Link to='./components/events/New'>New Events</Link>
       </React.Fragment>
     );
   }
