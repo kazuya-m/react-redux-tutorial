@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { Field, reduxForm } from 'redux-form';
 
-import { postEvent } from '../../actions';
+//import { postEvent } from '../../actions';
 
 class EventsShow extends Component {
   constructor(props) {
@@ -61,7 +61,7 @@ const validate = values => {
   return errors;
 }
 
-const mapDispatchToProps = ({postEvent}); 
+//const mapDispatchToProps = ({postEvent}); 
 
-export default connect(null, mapDispatchToProps)(
+export default connect(null, null)(
   reduxForm({ validate, form: 'eventShowForm' })(EventsShow))
