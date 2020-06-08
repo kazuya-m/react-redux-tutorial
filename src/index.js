@@ -23,9 +23,10 @@ ReactDOM.render(
   <Provider store={store}>
     <BrowserRouter>
       <Switch>
-        <Route path='/components/events/New' component={EventsNew} />
-        <Route path='/components/events/id' component={EventsShow} />
+        <Route path='/events/New' component={EventsNew} />
+        <Route path='/events/:id' component={EventsShow} />
         <Route exact path='/' component={EventsIndex} />
+        <Route exact path='/events' component={EventsIndex} />
       </Switch>
     </BrowserRouter>
   </Provider>,
