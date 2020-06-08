@@ -14,6 +14,11 @@ class EventsIndex extends Component {
     return _.map(this.props.events, (event, ind) => (
       <tr key={ind}>
         <td>{event.id}</td>
+        <td>
+          <Link to={`/events/${event.id}`}>
+            {event.title}
+          </Link>
+        </td>
         <td>{event.title}</td>
         <td>{event.body}</td>
       </tr>
@@ -21,8 +26,6 @@ class EventsIndex extends Component {
   }
 
   render() {
-    const props = this.props; 
-    
     return (
       <React.Fragment>
         <table>
@@ -35,10 +38,9 @@ class EventsIndex extends Component {
           </thead>
           <tbody>
             {this.renderEvents()}
-            {console.log(props.events)}
           </tbody>
         </table>
-        <Link to='events/new'>New Events</Link>
+        <Link to='./events/New'>New Events</Link>
       </React.Fragment>
     );
   }
