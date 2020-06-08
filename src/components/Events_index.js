@@ -26,8 +26,6 @@ class EventsIndex extends Component {
   }
 
   render() {
-    const props = this.props; 
-    
     return (
       <React.Fragment>
         <table>
@@ -40,10 +38,9 @@ class EventsIndex extends Component {
           </thead>
           <tbody>
             {this.renderEvents()}
-            {console.log(props.events)}
           </tbody>
         </table>
-        <Link to='./components/events/New'>New Events</Link>
+        <Link to='./events/New'>New Events</Link>
       </React.Fragment>
     );
   }
